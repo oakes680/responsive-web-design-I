@@ -1,3 +1,451 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+
+
+.container {
+	max-width: 876px; 
+	 margin: 0 auto;
+}
+
+header {
+	padding-bottom: 7%;
+	margin-bottom: 3%;
+	border-bottom: solid 2px black
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 4%;
+	margin-bottom: 5%;
+}
+header nav {
+	width: 70%;
+	display: flex;
+	justify-content: space-between
+}
+
+header nav a {
+  /* display:flex;  */
+	text-decoration: none;
+	/* justify-content: space-evenly; */
+	color: grey;
+}
+
+
+/* Header and Image section  */
+
+.headerAndImage {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	
+}
+ h1 {
+	font-size: 60px;
+	vertical-align: middle;
+	text-align:center;
+	padding-left: 3%;
+	
+}
+
+.getStarted  {
+	font-size: 16px;
+	border: solid 2px black;
+	padding: 2%;	
+}
+
+
+/* Text and image section */
+/* double section */
+
+.sectionDouble {
+	display: flex;
+	justify-content: space-between;
+}
+.features {
+	width: 43%;	
+}
+
+.about {
+	width: 43%;
+}
+
+.middle-img {
+	margin: 5% 0px;
+}
+
+
+/* triple section */
+
+.sectionTriple {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
+	padding-bottom: 4%;
+	margin-bottom: 4%;
+}
+
+.services {
+	width: 28%;
+}
+
+.product {
+	width: 28%;
+}
+
+.vision {
+	width: 28%;	
+}
+
+/* Address Secion */
+
+address {
+	line-height: 20px;
+}
+
+.phoneEmail {
+	line-height: 40px;
+	margin-top:10px;
+}
+
+
+/* Copyright section */
+
+.copy {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+
+/* *************************** Services Page *********************** */
+
+.services-header-img {
+	margin-bottom: 1%;
+	width: 100%	
+}
+
+h2 {
+	font-size: 24px;
+}
+
+.sixCards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	
+}
+
+.cardInner {
+	width: 47%;
+	background-color: #e9e9e9;
+	border: 1px solid black;
+	margin-bottom: 25px;
+	padding: 3%;
+}
+
+.pcard {
+	margin-bottom: 15px;
+}
+
+
+button {
+	font-size: 60%;
+	padding: 8px 35px;;
+	border-radius: 5px;
+	background-color: #fdfafa;
+	border: 1px solid black
+}
+
+.lowSection {
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.textList {
+	display: flex;
+	flex-direction: column;
+	width: 47%;
+	padding: 0px px 0px 25px;
+	
+}
+
+.services-info-img {
+	width: 47%;
+}
+
+.textList p {
+	margin-bottom: 20px; 
+}
+
+ul.list {
+	list-style-type: square;
+	padding-left: 20px;
+} 
+
+.copy {
+	text-align: center;
+	margin-top: 30px;
+}
+
+
+/* ************* Responsive  ******************* */
+/* *****************************800px */
+@media (max-width: 800px) {
+ .container {
+	  max-width: 90%;
+ }
+ .imgCode {
+	 display: none;
+ }
+ .middle-img {
+	 width: 100%
+ }
+ .navbar {
+	flex-direction: column-reverse;
+	
+ }
+	header nav {
+		margin-top: 4%;
+		width: 90%
+	}
+}
+/* **************     500px      ***************** */
+
+@media (max-width: 500px) {
+	.container {
+		 max-width: 100%;
+	}
+
+	
+	header nav {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: center
+	}
+
+	header nav a {
+		border-bottom: 1px grey solid;
+		padding: 19.5px 0px;
+		font-size: 20px;
+	}
+
+	.service-border {
+		border-top: 1px grey solid  ;
+	}
+
+	h1 {
+		font-size: 74px;
+		padding: 22px 0 0 0;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+
+
+	.getStarted  {
+		font-size: 15px;
+		font-family: 'Roboto', cursive;
+		border: solid 2px black;
+		padding: 1% 8%;	
+	}
+	
+	.headerAndImage {
+		/* margin-bottom: -0px; */
+		display: block
+	}
+
+
+section {
+	width: 90%;
+	margin: 0 auto;
+	border-top: 2px black solid;
+	/* border-bottom: 2px black solid; */
+	padding: 20px 0px;;
+	
+}
+.sectionDouble {
+	/* width: 90%; */
+	display: block;
+	justify-content: space-between;
+}
+.features {
+	width: 90%;	
+	margin-top: 20px;
+
+}
+
+.about {
+	width: 90%;
+}
+
+.middle-img {
+	margin: 5% 0px;
+}
+
+header {
+	border: none;
+	margin-bottom: 10px;
+}
+
+.sectionTriple {
+	display: block;
+	/* justify-content: space-between;
+	border-bottom: 2px solid black;
+	padding-bottom: 4%;
+	margin-bottom: 4%; */
+}
+
+.services {
+	width: 90%;
+}
+
+.product {
+	width: 90%;
+}
+
+.vision {
+	width: 90%;	
+}
+
+section p {
+	margin: 25px 0px;
+}
+
+.contact {
+	width: 90%;
+	margin: 0 auto
+}
+}
+
+/* *********** 500px services page********************* */
+
+
+@media (max-width: 500px) {
+	.container {
+		 max-width: 100%;
+	}
+
+	.sub-container {
+		width:90%;
+		margin: 0 auto
+	}
+
+
+	.cardInner {
+		width: 90%;
+		background-color: #e9e9e9;
+		border: 1px solid black;
+		margin: 0 auto;
+		margin-bottom: 25px;
+		padding: 3%;
+	}
+	.lowSection {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column-reverse;
+		
+	}
+
+	.textList {
+		/* display: flex;
+		flex-direction: column; */
+		width: 100%;
+		/* padding: 0px px 0px 25px; */
+		margin: 0 auto;
+		
+	}
+	
+	.services-info-img {
+		width: 100%;
+		padding-bottom: 20px;
+		margin: 0 auto;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
